@@ -1,8 +1,8 @@
 <template>
     <div class="cc">
-    <div class="creator">
+    <!-- <div class="creator">
         <img src="../assets/icons/trekkspace.png" alt="">
-    </div> 
+    </div>  -->
     <!-- // fullscreen button -->
     <div @click="fullscreenMode()" class="fullscreen">
         {{fullscreen}}

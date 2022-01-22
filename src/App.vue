@@ -39,13 +39,6 @@ import ActiveKillerPerks from './components/ActiveKillerPerks.vue'
 // eslint-disable-next-line no-unused-vars
 import * as events from '@/js/events/keyboardEvents.js'
 
-import Img1 from '@/assets/backgrounds/fire.jpg'
-import Img2 from '@/assets/backgrounds/meg.jpg'
-import Img3 from '@/assets/backgrounds/astronomy.jpg'
-import Img4 from '@/assets/backgrounds/b1.jpg'
-import Img5 from '@/assets/backgrounds/b2.jpg'
-import Img6 from '@/assets/backgrounds/b3.jpg'
-
 
 export default {
   name: 'app',
@@ -65,16 +58,7 @@ export default {
   },
   computed: {
       image(){
-          let img = {
-              0: Img1,
-              1: Img2,
-              2: Img3,
-              3: Img4,
-              4: Img5,
-              5: Img6
-          }
-
-          return img[this.$store.state.playerSettings.background]
+          return this.$store.state.playerSettings.backgroundURL
       }
   }
 }
@@ -115,13 +99,14 @@ body{
 }
 
 .background{
-    background: no-repeat center top fixed;
+    background: no-repeat center 20% fixed;
+    /* background-size: 100%; */
     position: fixed;
     top: 0;
     left: 0;
     background-size: 100%;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     z-index: -1;
 }
 
